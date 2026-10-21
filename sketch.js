@@ -36,7 +36,12 @@ function draw(){
       background(20);
     }
   aWasPressed = aPressed;
+  }else {
+    x = mouseX;
+    y = mouseY;
+    moving = (mouseX !== pmouseX || mouseY !== pmouseY);
   }
+
   
 if(moving){
   drawSqaure();
@@ -64,5 +69,32 @@ function newColor(){
   green = random(255);
   blue = (255);
   
+ // function drawSquare() {
+ // push();
+ // translate(x, y);
+  //rotate(random(TWO_PI));
+  //fill(red, green, blue);
+ // noStroke();
+ // rect(0, 0, 30, 30);
+  //pop();
+//}
+
+//function newColor() {
+ // red = random(255);
+  //green = random(255);
+ // blue = random(255);
+//}
+
+function keyPressed() {
+  if (key === "c" || key === "C") {
+    newColor();
+  }
+
+  if (key === " ") {
+    background(20);
+  }
+
+  return false;
+}
 }
 }
