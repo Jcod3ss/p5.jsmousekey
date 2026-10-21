@@ -36,16 +36,19 @@ function draw(){
       background(20);
     }
   aWasPressed = aPressed;
-  }else {
-    x= mouseX;
-    y= mouseY;
-    moving = (mouseX != pmouseX || mouseY != pmouseY);
   }
+  
 if(moving){
   drawSqaure();
 }
-drawColorBox();
-}
+  //intructions
+  fill(255);
+  textSize(16);
+  textAlign(LEFT);
+  text("move left joystick", 20,55);
+  text("press a to change color", 20, 80);
+  text("press b to clear canvas", 20,105);
+
 
 function drawSqaure(){
   push();
@@ -56,25 +59,10 @@ function drawSqaure(){
   pop();
 }
 
-function drawColorBox(){
-  push();
-  fill(red, green, blue);
-  stroke(255);
-  strokeWeight(3);
-  rect(30,30,30,30);
-  pop();
-}
 function newColor(){
   red = random(255);
   green = random(255);
   blue = (255);
+  
 }
-function keyPressed(){
-  if (key === "c"){
-    newColor();
- }
-if(key === ""){
-  background(20);
-}
-return false;
 }
