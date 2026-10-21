@@ -53,7 +53,9 @@ if(moving){
   text("move left joystick", 20,55);
   text("press a to change color", 20, 80);
   text("press b to clear canvas", 20,105);
-
+  text("dragg mouse", 20, 128);
+  text("space bar clears canvas", 20, 150);
+}
 
 function drawSqaure(){
   push();
@@ -67,34 +69,12 @@ function drawSqaure(){
 function newColor(){
   red = random(255);
   green = random(255);
-  blue = (255);
-  
- // function drawSquare() {
- // push();
- // translate(x, y);
-  //rotate(random(TWO_PI));
-  //fill(red, green, blue);
- // noStroke();
- // rect(0, 0, 30, 30);
-  //pop();
-//}
-
-//function newColor() {
- // red = random(255);
-  //green = random(255);
- // blue = random(255);
-//}
-
+  blue = random(255);
+}
+ 
 function keyPressed() {
-  if (key === "c" || key === "C") {
-    newColor();
-  }
 
   if (key === " ") {
     background(20);
-  }
-
-  return false;
-}
 }
 }
