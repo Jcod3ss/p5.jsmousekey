@@ -13,7 +13,7 @@ let xwasPressed = false;
 let shape= 0;
 let brushSize= 30;
 
-let rainbow = false;
+//let rainbow = false;
 //canvas
 function setup(){
   createCanvas(640, 480);
@@ -69,7 +69,7 @@ function draw(){
    //use mouse without controller
     x = mouseX;
     y = mouseY;
-    moving = mouseIsPressed;//(mouseX !== pmouseX || mouseY !== pmouseY);
+    moving =(mouseX !== pmouseX || mouseY !== pmouseY);
   }
 
   
@@ -92,11 +92,7 @@ function drawSqaure(){
   push();
   translate(x,y);
   
-  fill(
-  (frameCount * 5)% 255,
-    (frameCount * 3)% 255,
-    (frameCount * 7)% 255
-  );
+  fill(red, green, blue);
  
   noStroke();
   
